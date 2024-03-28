@@ -5,9 +5,10 @@ class LineFood < ApplicationRecord
   belongs_to :order, optional: true
 
   validates :count, numericality: { greater_than: 0 }
-  
+
   # 全てのLineFoodからwhereでactive: trueなもの一覧をActiveRecord_Relationのかたちで返す
   scope :active, -> { where(active: true) }
+  # 「他の店舗のLineFood」があるかどうか？をチェック
   scope :other_restaurant, -> (picked_restaurant_id) { where.not(restaurant_id: picked_restaurant_id) }
 
   def total_amount
