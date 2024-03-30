@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
 import { Restaurants } from "./containers/Restaurants.jsx";
@@ -10,19 +10,22 @@ import { Orders } from "./containers/Orders.jsx";
 function App() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         // 店舗一覧ページ
-        <Route exact path="/restaurants">
+        <Route path='/restaurants' element={<Restaurants />} />
+        {/* <Route exact path="/restaurants">
           <Restaurants />
-        </Route>
+        </Route> */}
         // フード一覧ページ
-        <Route exact path="/foods">
+        <Route path='food' element={<Foods />} />
+        {/* <Route exact path="/foods">
           <Foods />
-        </Route>
+        </Route> */}
         // 注文ページ
-        <Route exact path="/orders">
+        <Route path='/orders' element={<Orders />} />
+        {/* <Route exact path="/orders">
           <Orders />
-        </Route>
+        </Route> */}
 
         
         <Route
@@ -32,7 +35,7 @@ function App() {
         />
 
 
-      </Switch>
+      </Routes>
     </Router>
   );
 }
