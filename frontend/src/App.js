@@ -17,7 +17,7 @@ function App() {
           <Restaurants />
         </Route> */}
         // フード一覧ページ
-        <Route path='food' element={<Foods />} />
+        <Route path='/foods' element={<Foods />} />
         {/* <Route exact path="/foods">
           <Foods />
         </Route> */}
