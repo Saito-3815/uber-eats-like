@@ -40,7 +40,7 @@ module Api
         end
       end
 
-
+      # 仮注文を別店舗の仮注文に置き換える
       def replace
         # 他店舗のLineFood一つずつに対してupdate_attributeで更新
         LineFood.active.other_restaurant(@ordered_food.restaurant.id).each do |line_food|

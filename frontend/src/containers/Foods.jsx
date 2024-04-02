@@ -115,7 +115,7 @@ export const Foods = () => {
     })
       .then(() => navigation("/orders")) ///ordersページ、つまり注文ページOrders.jsxへとルーティング
       .catch((e) => {
-        if (e.response.status === HTTP_STATUS_CODE.NOT_ACCEPTABLE) { //別の店舗情報があればNewOrderDialogを表示
+        if (e.response.status === HTTP_STATUS_CODE.NOT_ACCEPTABLE) { //別の店舗の仮注文が存在し例外406が返ってきた場合
           setState({
             ...state,
             isOpenOrderDialog: false,
