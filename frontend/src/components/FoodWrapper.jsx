@@ -41,7 +41,8 @@ export const FoodWrapper = ({
   onClickFoodWrapper,
   imageUrl,
 }) => (
-  <Wrapper onClick={() => onClickFoodWrapper(food)}>
+  //クリックされた時に関数が実行される
+  <Wrapper onClick={() => onClickFoodWrapper(food)}>  
     <FoodDetail>
       {food.name}
       <DescriptionWrapper>
