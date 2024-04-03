@@ -32,12 +32,17 @@ import { COLORS } from "../style_constants";
 import { REQUEST_STATE } from "../constants";
 import { HTTP_STATUS_CODE } from "../constants";
 
+import {
+  HeaderWrapper,
+  MainLogoImage
+} from '../components/StyledHeader.jsx';
+
 //justify-content: space-between; で要素が左右端に並ぶ
-const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 32px;
-`;
+// const HeaderWrapper = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 8px 32px;
+// `;
 
 const BagIconWrapper = styled.div`
   padding-top: 24px;
@@ -47,9 +52,9 @@ const ColoredBagIcon = styled(LocalMallIcon)`
   color: ${COLORS.MAIN};
 `;
 
-const MainLogoImage = styled.img`
-  height: 90px;
-`;
+// const MainLogoImage = styled.img`
+//   height: 90px;
+// `;
 
 const FoodsList = styled.div`
   display: flex;
